@@ -3,11 +3,12 @@
 <ul>
 <% @tasks.each do |task| %>
   <li>
-  <%= link_to task.title, task_path(task)%>
-  <%= link_to "Delete",
+  <%= link_to task.title, task_path(task), class: 'lead' %>
+  <%= link_to "X",
             task_path(task),
             method: :delete,
-            data: { confirm: "Are you sure?" } %>
+            data: { confirm: "Are you sure?" },
+            class: 'btn-sm btn-outline-danger' %>
 
   </li>
 <% end %>
