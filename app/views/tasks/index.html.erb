@@ -2,7 +2,7 @@
 
 <ul>
 <% @tasks.each do |task| %>
-  <li>
+  <li class='mb-3'>
   <%= link_to task.title, task_path(task), class: 'lead' %>
   <%= link_to "X",
             task_path(task),
@@ -13,3 +13,4 @@
   </li>
 <% end %>
 </ul>
+<%= link_to "New task", new_task_path(), class: 'btn btn-primary' %>
